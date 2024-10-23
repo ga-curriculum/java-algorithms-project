@@ -1,5 +1,5 @@
 <h1>
-  <span class="headline">[tktk Module Name]</span>
+  <span class="headline">Java Algorithms Project</span>
   <span class="subhead">GitHub Repo Deliverable</span>
 </h1>
 

@@ -1,16 +1,8 @@
 <h1>
-  <span class="headline">[tktk Module Name]</span>
+  <span class="headline">Java Algorithms ProjectJava Algorithms Project]</span>
   <span class="subhead">Release Notes</span>
 </h1>
 
-## Version 1.0 - Updates from legacy content
-
-This release modularizes the legacy [tktk previous project name] project and provides some other minor updates detailed below.
-
 ### Release details
 
-#### Additions
-
-#### Changes
-
-#### Removals
+This is a brand new project module!
