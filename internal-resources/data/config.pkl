@@ -1,0 +1,35 @@
+amends "https://pages.git.generalassemb.ly/modular-curriculum-all-courses/universal-resources-internal/static/v2/pkl/template.pkl"
+
+import "microlessons.pkl" as mls
+
+// See template.pkl for full configuration options available here.
+
+// After modifying this file, use this command while in the root directory
+// for this project to create the final configuration file (config.json):
+// pkl eval -f json ./internal-resources/data/config.pkl -o %{moduleDir}/%{moduleName}.%{outputFormat}
+
+repo {
+  // This name is shown in the header nav to navigate users home
+  friendlyName = "[tktk Module Name]"
+  // This must match the repo name as it appears on GitHub exactly
+  name = "tktk-module-name"
+  type = "Project"
+}
+
+courses {
+  // ! Projects are typically not delivered through a canvas landing page
+  // ! meaning "fallback" is the default view most students will see (unless
+  // ! a canvas-landing-page directory is added to this repo.)
+  new {
+    // Do not remove this fallback course!
+    name = "fallback"
+    isHeaderModuleNavShown = false
+    isFooterLessonNavShown = false
+    microlessons {
+      // add microlessons here, in the order they should be delivered
+      mls.projectJourney
+      mls.requirementsAndGuidance
+      mls.deliverables
+    }
+  }
+}
