@@ -5,14 +5,16 @@
 
 ## Overview
 
-In this project, you will build a Cipher Algorithms or Maze Generation and Solver application that users interact with via the command line. This project focuses on demonstrating your understanding of algorithms and data structures in Java. No matter which project you choose, you must implement various features to meet the minimum requirements. The users of each application should be able to select from multiple commands to interact with the application and see the results of their commands. Choose from:
+In this project, you will build a Cipher Algorithms or Maze Generation and Solver application that users interact with via the command line. This project focuses on demonstrating your understanding of algorithms and data structures in Java.
 
-- Cipher Algorithms - Ceasar Cipher and Vignere Cipher
-- Maze Generation and Solver
+No matter which project you choose to build, you must implement various features to meet the minimum requirements. The users of each application should be able to select from multiple commands to interact with the application and see the results of their commands. Choose from one of the below options:
 
-**Bonus, in addition to one of the projects above:**
+- Cipher algorithms (Caesar cipher and Vigenère cipher)
+- Maze generation and solver
 
-- RSA Encryption with Key Generation using Trees
+In addition to one of the projects above you can can also implement this functionality:
+
+- RSA encryption with key generation using trees
 
 ***You will work individually on this project***.
 
@@ -22,130 +24,126 @@ A printable version of the project requirements can be found [here](./assets/pro
 
 ## Technical requirements
 
-### Minimum Requirements
+### Minimum requirements - cipher algorithms
 
-> ✅ Any items marked incomplete in this section will result in the project receiving a failing grade.
+> ✅ If you build a cipher algorithms project any items marked incomplete in this section will result in the project receiving a failing grade.
 
-#### Cipher Algorithms
+#### Caesar cipher
 
-#### Ceasar Cipher
+- Users can input a message and a key to encrypt a message by shifting each letter in the message by the key. For example, `encrypt hello 3` would return `khoor`.
+- Users can input a message and a key to decrypt a message by shifting each letter in the message by the key. For example, `decrypt khoor 3` would return `hello`.
+- Users can undo the last encryption using a stack-based undo system. For example, `undo` would return the message to the state before the last encryption.
+- Users can undo the last decryption using a stack-based undo system. For example, `undo` would return the message to the state before the last decryption.
+- Users can input non-alphabetic characters in the message that are not encrypted. For example, `encrypt hello! 3` would return `khoor!`.
+- Users can input a message with both upper and lowercase letters, and the case is preserved in the encrypted message. For example, `encrypt Hello 3` would return `Khoor`.
+- Users can see an error message if they input an invalid key or message. For example, `encrypt hello 0` would return an error message.
 
-- Users can input a message and a key to encrypt a message by shifting each letter in the message by the key. Example: `encrypt hello 3` would return `khoor`.
-- Users can input a message and a key to decrypt a message by shifting each letter in the message by the key. Example: `decrypt khoor 3` would return `hello`.
-- Users can undo the last encryption using a stack-based undo system. Example: `undo` would return the message to the state before the last encryption.
-- Users can undo the last decryption using a stack-based undo system. Example: `undo` would return the message to the state before the last decryption.
-- Users can input non-alphabetic characters in the message that are not encrypted. Example: `encrypt hello! 3` would return `khoor!`.
-- Users can input a message with both upper and lowercase letters, and the case is preserved in the encrypted message. Example: `encrypt Hello 3` would return `Khoor`.
-- Users can see an error message if they input an invalid key or message. Example: `encrypt hello 0` would return an error message.
+#### Vigenère cipher
 
-#### Vignere Cipher
-
-- Users can input a message and a key to encrypt a message by shifting each letter in the message by the corresponding letter in the key. Example: `encrypt hello abc` would return `hfnlp`.
-- Users can input a message and a key to decrypt a message by shifting each letter in the message by the corresponding letter in the key. Example: `decrypt hfnlp abc` would return `hello`.
+- Users can input a message and a key to encrypt a message by shifting each letter in the message by the corresponding letter in the key. For example, `encrypt hello abc` would return `hfnlp`.
+- Users can input a message and a key to decrypt a message by shifting each letter in the message by the corresponding letter in the key. For example, `decrypt hfnlp abc` would return `hello`.
 - Keywords are repeated recursively if the message is longer than the key.
-- Users can see an error message if they input an invalid key or message. Example: `encrypt hello 123xyz` would return an error message.
-- Users can analyze the message's frequency to determine the most likely key. Example: `frequency hello` would return the most likely key.
-- Users can input non-alphabetic characters in the message, which are not encrypted. Example: `encrypt hello! abc` would return `hfnlp!`.
-- Users can input a message with both upper and lowercase letters, and the case is preserved in the encrypted message. Example: `encrypt Hello abc` would return `Hfnlp`.
-- Users can see an error message if they input an invalid key or message. Example: `encrypt "" 0` would return an error message.
-
-#### Maze Generation and Solver
-
-- Users can input the height and width to generate a maze.
-
-Example command: `generate 10x10`
-Example Output:
-
-```bash
-##############
-#S     #     #
-# ### # ### ##
-#   # #   #  #
-### # ### # ##
-#   #     #  #
-# ##### ### ##
-# #   #     ##
-### # #####  #
-#     #   #  #
-############E#
-
-# S = Start
-# E = Exit 
-# # = Wall
-# Space = Open Path
-```
-- Users can input mathematical expressions to customize the maze generation. Example: `generate (5 + 3 * 2)x(5 * 2)` would generate a 16x10 maze.
-- Users can input `dfs` to solve the maze using a depth-first search algorithm. 
-
-Example command: `solve dfs`
-Example Output:
-
-```bash
-##############
-#S*****#     #
-#*###*#*### ##
-#*  #*#*  #  #
-###*#*###*# ##
-#***#*****#  #
-#*#####*### ##
-#*#   #*****##
-### # #####* #
-#     #***#* #
-############E#
-
-# S = Start
-# E = Exit 
-# # = Wall
-# Space = Open Path
-# * = Path
-```
-
-- Users can input `bfs` to solve the maze using a breadth-first search algorithm. Example: `solve bfs` would solve the maze using a breadth-first search algorithm.
-- Users can input `a*` to solve the maze using an A* or Dijkstra’s search algorithm. Example: `solve a*` would solve the maze using an A* or Dijkstra’s search algorithm.
-- Users can use `all` to solve the maze using all three algorithms and see the output of the common path between the three algorithms or a message of `No common path`.
-
-Example Command: `solve all`
-Example Output:
-
-```bash
-# Common Path
-
-##############
-#S*****#     #
-#*###*#*### ##
-#*  #*#*  #  #
-###*#*###*# ##
-#***#*****#  #
-#*#####*### ##
-#*#   #*****##
-### # #####* #
-#     #***#* #
-############E#
-```
-
-- Users can manipulate the maze by adding or removing walls. Example: `add 1,1` would add a wall at the coordinate 1,1.
-- Users can save the maze as a binary string to a file. Example: `save maze.bin` would save the maze to a file named `maze.bin`.
-- Users can load a maze from a file. Example: `load maze.bin` would load the maze from a file named `maze.bin`.
-- Users can see an error message if they input an invalid command. Example: `generate 0x0` or `add 1,1,1` would return an error message.
-
-### Strech Goals
-
-Stretch goals are optional. You do not need to complete any stretch goals to pass the project. However, you are encouraged to complete them if you have time.
-
-#### RSA Encryption
-
-- Users can generate a pair of RSA public and private keys by providing two prime numbers. Example: `generate 61 53` would generate a public and private key pair.
-- Public and private keys are generated by finding the greatest common divisor of the two prime numbers using the binary Euclidean algorithm.
-- Users can save the public and private keys to a file. Example: `generate 61 53 --save` would save the public and private keys to different files (`public_key.txt` and `private_key.txt`).
-- Users can see an error if the prime numbers are not prime or if the prime numbers are too small. Example: `generate 1 1` would return an error message.
-- Users can encrypt a message using the public key. Example: `encrypt "hello world" public_key.txt` would return the encrypted message.
-- Users can decrypt a message using the private key. Example: `decrypt "encrypted message" private_key.txt` would return the decrypted message.
-- Users can see an error message if they use an invalid key or message. Example: `encrypt "hello world" invalid_key.txt` would return an error message if the public key is invalid.
+- Users can see an error message if they input an invalid key or message. For example, `encrypt hello 123xyz` would return an error message.
+- Users can analyze the message's frequency to determine the most likely key. For example, `frequency hello` would return the most likely key.
+- Users can input non-alphabetic characters in the message, which are not encrypted. For example, `encrypt hello! abc` would return `hfnlp!`.
+- Users can input a message with both upper and lowercase letters, and the case is preserved in the encrypted message. For example, `encrypt Hello abc` would return `Hfnlp`.
+- Users can see an error message if they input an invalid key or message. For example, `encrypt "" 0` would return an error message.
 
 #### Overall requirements
 
 - Users can start the app by running the `main` method in the `App` class.
-- Users can input `help` to see a list of commands.
+- Users can use the `help` subcommand to see a list of commands.
+- The app is deployed online so that the rest of the world can use it.
+- You are shown as the only contributor to the project on GitHub.
+
+### Minimum requirements - maze generator and solver
+
+> ✅ If you build a maze generator and solver project, any items marked incomplete in this section will result in the project receiving a failing grade.
+
+#### Maze generator and solver
+
+- Users can input the height and width to generate a maze.
+
+  - Example command: `generate 10x10`
+  - Example output:
+
+    ```bash
+    ##############
+    #S     #     #
+    # ### # ### ##
+    #   # #   #  #
+    ### # ### # ##
+    #   #     #  #
+    # ##### ### ##
+    # #   #     ##
+    ### # #####  #
+    #     #   #  #
+    ############E#
+    
+    # S = Start
+    # E = Exit 
+    # # = Wall
+    # Space = Open Path
+    ```
+
+- Users can input mathematical expressions to customize the maze generation. For example, `generate (5 + 3 * 2)x(5 * 2)` would generate a 16x10 maze.
+- Users can input `dfs` to solve the maze using a depth-first search algorithm.
+
+  - Example command: `solve dfs`
+  - Example output:
+
+    ```bash
+    ##############
+    #S*****#     #
+    #*###*#*### ##
+    #*  #*#*  #  #
+    ###*#*###*# ##
+    #***#*****#  #
+    #*#####*### ##
+    #*#   #*****##
+    ### # #####* #
+    #     #***#* #
+    ############E#
+    
+    # S = Start
+    # E = Exit 
+    # # = Wall
+    # Space = Open Path
+    # * = Path
+    ```
+
+- Users can input `bfs` to solve the maze using a breadth-first search algorithm. For example, `solve bfs` would solve the maze using a breadth-first search algorithm.
+- Users can input `a*` to solve the maze using an A\* or Dijkstra's search algorithm. For example, `solve a*` would solve the maze using an A\* or Dijkstra's search algorithm.
+- Users can use `all` to solve the maze using all three algorithms and see the output of the common path between the three algorithms or a message of `No common path`.
+
+  - Example command: `solve all`
+  - Example output:
+
+    ```bash
+    # Common Path
+    
+    ##############
+    #S*****#     #
+    #*###*#*### ##
+    #*  #*#*  #  #
+    ###*#*###*# ##
+    #***#*****#  #
+    #*#####*### ##
+    #*#   #*****##
+    ### # #####* #
+    #     #***#* #
+    ############E#
+    ```
+
+- Users can manipulate the maze by adding or removing walls. For example, `add 1,1` would add a wall at the coordinate 1,1.
+- Users can save the maze as a binary string to a file. For example, `save maze.bin` would save the maze to a file named `maze.bin`.
+- Users can load a maze from a file. For example, `load maze.bin` would load the maze from a file named `maze.bin`.
+- Users can see an error message if they input an invalid command. For example, `generate 0x0` or `add 1,1,1` would return an error message.
+
+#### Overall requirements
+
+- Users can start the app by running the `main` method in the `App` class.
+- Users can use the `help` subcommand to see a list of commands.
 - The app is deployed online so that the rest of the world can use it.
 - You are shown as the only contributor to the project on GitHub.
 
@@ -172,9 +170,21 @@ Stretch goals are optional. You do not need to complete any stretch goals to pas
 
 ## Evaluation
 
-Your instructional team will evaluate your project after the project’s due date. Your instructors will use the above guidelines to determine whether or not your project meets all of the minimum requirements.
+Your instructional team will evaluate your project after the project's due date. Your instructors will use the above guidelines to determine whether or not your project meets all of the minimum requirements.
 
 If there is a specific section of code that you would like an instructor to provide additional feedback on, please ask!
+
+### Level Up - RSA encryption
+
+> ✅ Level Up objectives are optional. You do not need to complete any of the following objectives to pass the project. However, you are encouraged to complete any or all of these objectives if you have time and want to differentiate your project further.
+
+- Users can generate a pair of RSA public and private keys by providing two prime numbers. For example, `generate 61 53` would generate a public and private key pair.
+- Public and private keys are generated by finding the greatest common divisor of the two prime numbers using the binary Euclidean algorithm.
+- Users can save the public and private keys to a file. For example, `generate 61 53 --save` would save the public and private keys to different files (`public_key.txt` and `private_key.txt`).
+- Users can see an error if the prime numbers are not prime or if the prime numbers are too small. For example, `generate 1 1` would return an error message.
+- Users can encrypt a message using the public key. For example, `encrypt "hello world" public_key.txt` would return the encrypted message.
+- Users can decrypt a message using the private key. For example, `decrypt "encrypted message" private_key.txt` would return the decrypted message.
+- Users can see an error message if they use an invalid key or message. For example, `encrypt "hello world" invalid_key.txt` would return an error message if the public key is invalid.
 
 ## Guidance
 

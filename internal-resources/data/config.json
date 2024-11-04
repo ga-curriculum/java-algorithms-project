@@ -1,0 +1,115 @@
+{
+  "org": {
+    "friendlyName": "Modular Curriculum All Courses",
+    "name": "modular-curriculum-all-courses"
+  },
+  "repo": {
+    "friendlyName": "Java Algorithms Project",
+    "name": "java-algorithms-project",
+    "type": "Project"
+  },
+  "courses": [
+    {
+      "name": "fallback",
+      "logoUrl": "",
+      "microlessons": [
+        {
+          "friendlyName": "Project Journey",
+          "dirName": "project-journey",
+          "type": "Content",
+          "videoUrl": ""
+        },
+        {
+          "friendlyName": "Requirements and Guidance",
+          "dirName": "requirements-and-guidance",
+          "type": "Content",
+          "videoUrl": ""
+        },
+        {
+          "friendlyName": "GitHub Repo Deliverable",
+          "dirName": "github-repo-deliverable",
+          "type": "Content",
+          "videoUrl": ""
+        },
+        {
+          "friendlyName": "Deployed App Deliverable",
+          "dirName": "ddeployed-app-deliverable",
+          "type": "Content",
+          "videoUrl": ""
+        }
+      ],
+      "isHeaderShown": true,
+      "isHeaderModuleNavShown": false,
+      "isHeaderHomeNavShown": true,
+      "isHeaderMicrolessonNavShown": true,
+      "isHeaderMicrolessonVideoLinkShown": true,
+      "isHeaderNavSettingsShown": true,
+      "isFooterCopyrightShown": true,
+      "isFooterLessonNavShown": false,
+      "isStickyNavSettingShown": true,
+      "isStickyNavAllowed": true,
+      "isFixedNavAllowed": true,
+      "isStickyNavDefault": true,
+      "isStickyNavForcedDefault": false,
+      "isFixedNavForcedDefault": false,
+      "isDarkModeSettingShown": true,
+      "isDarkModeAllowed": true,
+      "isLightModeAllowed": true,
+      "isLightModeDefault": true,
+      "isLightModeForcedDefault": false,
+      "isDarkModeForcedDefault": false,
+      "isActivityTimeShown": true
+    },
+    {
+      "name": "jdc",
+      "logoUrl": "",
+      "microlessons": [
+        {
+          "friendlyName": "Project Journey",
+          "dirName": "project-journey",
+          "type": "Content",
+          "videoUrl": ""
+        },
+        {
+          "friendlyName": "Requirements and Guidance",
+          "dirName": "requirements-and-guidance",
+          "type": "Content",
+          "videoUrl": ""
+        },
+        {
+          "friendlyName": "GitHub Repo Deliverable",
+          "dirName": "github-repo-deliverable",
+          "type": "Content",
+          "videoUrl": ""
+        },
+        {
+          "friendlyName": "Deployed App Deliverable",
+          "dirName": "ddeployed-app-deliverable",
+          "type": "Content",
+          "videoUrl": ""
+        }
+      ],
+      "isHeaderShown": true,
+      "isHeaderModuleNavShown": false,
+      "isHeaderHomeNavShown": true,
+      "isHeaderMicrolessonNavShown": true,
+      "isHeaderMicrolessonVideoLinkShown": true,
+      "isHeaderNavSettingsShown": true,
+      "isFooterCopyrightShown": true,
+      "isFooterLessonNavShown": false,
+      "isStickyNavSettingShown": true,
+      "isStickyNavAllowed": true,
+      "isFixedNavAllowed": true,
+      "isStickyNavDefault": true,
+      "isStickyNavForcedDefault": false,
+      "isFixedNavForcedDefault": false,
+      "isDarkModeSettingShown": true,
+      "isDarkModeAllowed": true,
+      "isLightModeAllowed": true,
+      "isLightModeDefault": true,
+      "isLightModeForcedDefault": false,
+      "isDarkModeForcedDefault": false,
+      "isActivityTimeShown": true
+    }
+  ]
+}

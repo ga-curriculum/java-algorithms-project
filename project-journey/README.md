@@ -11,8 +11,6 @@ This guide will walk you through the most important components of your project d
 
 ## 1. Project info
 
-![The project journey](./assets/project-journey.png)
-
 Before you start planning, review the [project requirements](../requirements-and-guidance/README.md) to understand what features you must implement in your project. The **Guidance** section in that document also includes helpful tips to get started.
 
 ## 2. Create a GitHub repo

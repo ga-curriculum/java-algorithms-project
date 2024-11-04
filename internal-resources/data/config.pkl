@@ -18,8 +18,7 @@ repo {
 
 courses {
   // ! Projects are typically not delivered through a canvas landing page
-  // ! meaning "fallback" is the default view most students will see (unless
-  // ! a canvas-landing-page directory is added to this repo.)
+  // ! meaning "fallback" is the default view most students will see.
   new {
     // Do not remove this fallback course!
     name = "fallback"
@@ -29,7 +28,19 @@ courses {
       // add microlessons here, in the order they should be delivered
       mls.projectJourney
       mls.requirementsAndGuidance
-      mls.deliverables
+      mls.githubRepoDeliverable
+      mls.deployedAppDeliverable
+    }
+  }
+  new {
+    name = "jdc"
+    isHeaderModuleNavShown = false
+    isFooterLessonNavShown = false
+    microlessons {
+      mls.projectJourney
+      mls.requirementsAndGuidance
+      mls.githubRepoDeliverable
+      mls.deployedAppDeliverable
     }
   }
 }

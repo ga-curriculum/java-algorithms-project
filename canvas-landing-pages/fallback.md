@@ -16,6 +16,8 @@ This project is designed to give students an opportunity to apply their knowledg
 
 [Requirements and Guidance](../requirements-and-guidance/README.md)
 
-[Deliverables](../deliverables/README.md)
+[GitHub Repo Deliverable](../github-repo-deliverable/README.md)
+
+[Deployed App Deliverable](../deployed-app-deliverable/README.md)
 
 [Project Requirements PDF](../requirements-and-guidance/assets/project-requirements.pdf)

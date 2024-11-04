@@ -13,11 +13,11 @@ This project is designed to give students an opportunity to apply their knowledg
 
 [Project Journey](./project-journey/README.md)
 
-[Project Requirements and Guidance](./requirements-and-guidance/README.md)
+[Requirements and Guidance](./requirements-and-guidance/README.md)
 
-[Project GitHub Repo Deliverable](./github-repo-deliverable/README.md)
+[GitHub Repo Deliverable](./github-repo-deliverable/README.md)
 
-[Project Deployed App Deliverable](./deployed-app-deliverable/README.md)
+[Deployed App Deliverable](./deployed-app-deliverable/README.md)
 
 [Project Requirements PDF](./requirements-and-guidance/assets/project-requirements.pdf)
 
@@ -26,6 +26,11 @@ This project is designed to give students an opportunity to apply their knowledg
 ### Prerequisites
 
 Students should have an understanding of algorithms and data structures, as well as experience with Java.
+
+### Landing pages
+
+- [Java Career Development Program - JCD](./canvas-landing-pages/jcd.md)
+- [Fallback](./canvas-landing-pages/fallback.md)
 
 ### Requirements document
 

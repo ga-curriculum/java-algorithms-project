@@ -16,9 +16,16 @@ requirementsAndGuidance = new Template.Microlesson {
   videoUrl = ""
 }
 
-deliverables = new Template.Microlesson {
-  friendlyName = "Deliverables"
-  dirName = "deliverables"
+githubRepoDeliverable = new Template.Microlesson {
+  friendlyName = "GitHub Repo Deliverable"
+  dirName = "github-repo-deliverable"
+  type = "Content"
+  videoUrl = ""
+}
+
+deployedAppDeliverable = new Template.Microlesson {
+  friendlyName = "Deployed App Deliverable"
+  dirName = "ddeployed-app-deliverable"
   type = "Content"
   videoUrl = ""
 }
