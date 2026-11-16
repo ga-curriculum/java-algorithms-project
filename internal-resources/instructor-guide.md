@@ -45,4 +45,4 @@ Edits to project requirements are complex and should be made thoughtfully. When 
 
 We are constantly working to improve our resources for instructors and students.
 
-**Have something to contribute to this Instructor Guide?** [Let us know](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/universal-resources-internal/module-feedback.html).
+**Have something to contribute to this Instructor Guide?** [Let us know](https://ga-curriculum.github.io/universal-resources-internal/module-feedback.html).
